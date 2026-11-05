@@ -2,6 +2,7 @@ package com.bms.BookMyShowApp.controller;
 
 import com.bms.BookMyShowApp.dto.MovieResponse;
 import com.bms.BookMyShowApp.service.CatalogService;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,6 +18,7 @@ public class MovieController {
         this.catalogService = catalogService;
     }
 
+    @GetMapping
     public List<MovieResponse> movies(){
         return catalogService.movies();
     }
